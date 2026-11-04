@@ -1,0 +1,21 @@
+# Example configuration. Copy it to .Renviron and replace every value.
+# Never commit the real .Renviron.
+
+# AeroDataBox (RapidAPI)
+AERODATABOX_KEY=cambia_esto
+
+# MariaDB
+VUELOS_DB_HOST=cambia_esto
+VUELOS_DB_NAME=cambia_esto
+# Read and write user: load_fids.R, daily_summary.R, purge.R
+VUELOS_DB_USER=cambia_esto
+VUELOS_DB_PASSWORD=cambia_esto
+# Read-only user: send_report.R, export_csv.R, check_freshness.R
+VUELOS_RO_USER=cambia_esto
+VUELOS_RO_PASSWORD=cambia_esto
+
+# Email: send_report.R, send_alert.R
+SMTP_USER=cambia_esto
+SMTP_PASSWORD=cambia_esto
+# One address, or several separated by commas
+REPORT_TO=cambia_esto

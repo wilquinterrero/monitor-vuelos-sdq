@@ -1,0 +1,22 @@
+# Secrets
+.Renviron
+.env
+.powerbi_pass
+*.pem
+
+# Data and runtime output
+raw/
+data/
+archivo/
+notebooks/
+logs/
+*.lock
+*.json
+
+# Agent tooling metadata
+.atl/
+
+# Environments and R session files
+.venv/
+.Rhistory
+.RData
