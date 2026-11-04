@@ -4,10 +4,11 @@
 > Las Américas airport (SDQ) from the AeroDataBox API, stores it in MariaDB, and produces a daily
 > HTML email report, failure alerts, and CSV files for a Power BI dashboard. Flight detail is
 > deleted on a schedule designed to stay under a 7-day retention limit. This repository contains
-> code only, with no data or credentials.
+> code and sample screenshots, with no flight data files or credentials.
 
-Proyecto de portafolio de **WilData Systems**. Este repositorio contiene solo el código:
-**no incluye datos de vuelos, credenciales ni capturas de datos reales**.
+Proyecto de portafolio de **WilData Systems**. Este repositorio contiene el código y capturas de
+ejemplo: **no incluye archivos de datos de vuelos ni credenciales**. Las capturas muestran cifras
+agregadas reales de pocos días, por lo que no sirven para evaluar a una aerolínea.
 
 ## El problema
 
@@ -82,7 +83,8 @@ Un **día** es la fecha local de RD de la hora programada del vuelo en SDQ.
   minutos**.
 - **Puntualidad:** vuelos con dato de retraso y retraso de 15 minutos o menos, entre vuelos con dato
   de retraso. **Incluye salidas y llegadas juntas** en la cifra global y en el gráfico por aerolínea;
-  la tabla de ranking las separa por dirección.
+  la tabla de ranking las separa por dirección. El dashboard de Power BI, en cambio, calcula
+  puntualidad y retraso **solo con llegadas**.
 - **Cancelados y desviados:** se cuentan en el total, pero no entran en las métricas de retraso.
 - **Retrasos de más de 12 horas (720 min):** suelen ser vuelos reprogramados. Se excluyen del
   **promedio y del máximo** de retraso, y se cuentan aparte en `flights_delayed_720`. **Siguen
@@ -113,7 +115,7 @@ usarlo o de publicar datos.
 
 ## Qué NO incluye
 
-- Datos de vuelos, CSV ni respuestas crudas de la API.
+- Archivos de datos de vuelos, CSV ni respuestas crudas de la API.
 - Credenciales: `.Renviron.example` tiene solo valores de ejemplo.
 - Configuración de un servidor real.
 
@@ -132,8 +134,14 @@ es la primera fecha con captura completa. `assets/logo.png` es opcional.
 
 ## Capturas
 
-<!-- Agregar las imágenes a docs/img/ y descomentar estas líneas. -->
-<!-- ![Reporte diario por correo](docs/img/reporte.png) -->
-<!-- ![Dashboard de Power BI](docs/img/powerbi.png) -->
+### Reporte diario por correo
 
-*Espacio reservado para capturas en `docs/img/`.*
+![Reporte diario por correo](docs/img/correo.png)
+
+### Dashboard: resumen
+
+![Dashboard de Power BI: resumen](docs/img/dashboard_resumen.png)
+
+### Dashboard: detalle
+
+![Dashboard de Power BI: detalle](docs/img/dashboard_detalle.png)
