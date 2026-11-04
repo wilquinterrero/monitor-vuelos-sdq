@@ -109,6 +109,20 @@ sistema, incluido el modelo de Power BI, debe actualizarse a diario para respeta
 Este proyecto no sustituye la lectura de los términos de AeroDataBox. Revisar los vigentes antes de
 usarlo o de publicar datos.
 
+## Análisis exploratorio (Python)
+
+El sistema automático está en R. El análisis exploratorio está en Python con Jupyter:
+[`analisis/analisis_vuelos.ipynb`](analisis/analisis_vuelos.ipynb). El notebook no incluye datos ni
+salidas: para ejecutarlo se necesita una base propia.
+
+**Paquetes de Python:** `jupyter`, `pandas`, `sqlalchemy`, `pymysql` y `matplotlib`.
+
+**Variables de entorno:** `VUELOS_RO_USER`, `VUELOS_RO_PASSWORD`, `VUELOS_DB_HOST` y `VUELOS_DB_NAME`.
+
+**Diferencia con el sistema en R:** el notebook excluye los retrasos de más de 12 horas de todos sus
+cálculos, incluido el % de vuelos con más de 15 minutos. `daily_summary.R` los excluye del promedio y
+del máximo, pero los sigue contando como retrasados, por lo que las cifras pueden no coincidir.
+
 ## Atribución
 
 **Datos: AeroDataBox.** La atribución aparece en los gráficos y en el pie del reporte.
