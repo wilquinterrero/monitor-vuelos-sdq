@@ -104,7 +104,7 @@ Los márgenes suponen que los jobs corren a tiempo. El de `archivo/detalle/` dep
 del vuelo se descarga una fila (hasta 11,5 horas en la medición disponible). Toda copia en otro
 sistema, incluido el modelo de Power BI, debe actualizarse a diario para respetar el mismo límite.
 
-Este proyecto no sustituye la lectura de los términos de AeroDataBox: revisá los vigentes antes de
+Este proyecto no sustituye la lectura de los términos de AeroDataBox. Revisar los vigentes antes de
 usarlo o de publicar datos.
 
 ## Atribución
@@ -119,20 +119,20 @@ usarlo o de publicar datos.
 
 ## Puesta en marcha
 
-1. Copiá el proyecto a `/opt/monitor-vuelos`, o definí `MONITOR_VUELOS_HOME` con otra ruta.
-2. Instalá R y los paquetes listados arriba.
-3. Creá la base `vuelos_rd`, un usuario de lectura y escritura y otro de solo lectura. Ejecutá los
+1. Copiar el proyecto a `/opt/monitor-vuelos`, o definir `MONITOR_VUELOS_HOME` con otra ruta.
+2. Instalar R y los paquetes listados arriba.
+3. Crear la base `vuelos_rd`, un usuario de lectura y escritura y otro de solo lectura. Ejecutar los
    archivos de `sql/` en orden.
-4. Copiá `.Renviron.example` a `.Renviron`, completá los valores y limitá sus permisos
+4. Copiar `.Renviron.example` a `.Renviron`, completar los valores y limitar sus permisos
    (`chmod 600 .Renviron`).
-5. Creá la carpeta `logs/`, probá con `Rscript send_report.R --dry-run` y agregá el cron.
+5. Crear la carpeta `logs/`, probar con `Rscript send_report.R --dry-run` y agregar el cron.
 
-Para otro aeropuerto, ajustá `AIRPORT` y `UTC_OFFSET_HOURS`. `FIRST_FULL_DAY`, en `send_report.R`,
+Para otro aeropuerto, ajustar `AIRPORT` y `UTC_OFFSET_HOURS`. `FIRST_FULL_DAY`, en `send_report.R`,
 es la primera fecha con captura completa. `assets/logo.png` es opcional.
 
 ## Capturas
 
-<!-- Agregá las imágenes a docs/img/ y descomentá estas líneas. -->
+<!-- Agregar las imágenes a docs/img/ y descomentar estas líneas. -->
 <!-- ![Reporte diario por correo](docs/img/reporte.png) -->
 <!-- ![Dashboard de Power BI](docs/img/powerbi.png) -->
 
