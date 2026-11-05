@@ -448,7 +448,7 @@ airline_table <- function(rows, ranking) {
   paste0(
     '<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">',
     '<tr>', th("Aerol&iacute;nea", "left"), th("Direcci&oacute;n", "left"), th("A tiempo"),
-    th("Retraso prom."), th("Total"), th("Cancel."), th("Cobertura"), '</tr>',
+    th("Retraso prom."), th("Total"), th("Cancel."), th("Con hora real"), '</tr>',
     body, '</table>')
 }
 
@@ -481,7 +481,7 @@ report_section <- function(data, report_date) {
     kpi_cell(ICON_PLANE, fmt_int(kpis$total), "Total de vuelos", delta("total", "n", NA)),
     kpi_cell(ICON_CANCEL, fmt_int(kpis$cancelled), "Cancelados", delta("cancelled", "n", FALSE)),
     kpi_cell(ICON_CLOCK, fmt_int(kpis$delayed), "Retraso &gt;15 min", delta("delayed", "n", FALSE)),
-    kpi_cell(ICON_CHECK, fmt_pct(kpis$coverage), "Cobertura", delta("coverage", "pp", TRUE), COLOR_GREEN),
+    kpi_cell(ICON_CHECK, fmt_pct(kpis$coverage), "Con hora real", delta("coverage", "pp", TRUE), COLOR_GREEN),
     '</tr></table>',
     chart_row(
       chart_card(ICON_PLANE, "Vuelos por hora local", "Hora programada en SDQ (UTC-4)",
@@ -506,7 +506,8 @@ report_section <- function(data, report_date) {
     airline_table(rows, ranking),
     '<p style="font-size:12px;color:', COLOR_MUTED, ';margin:10px 0 0;">',
     'A tiempo: retraso &le;15 min / vuelos con dato de retraso.<br>',
-    'Cobertura: vuelos con dato de retraso / (total - cancelados - desviados).</p>',
+    'Con hora real: vuelos con dato de retraso / (total - cancelados - desviados).<br>',
+    'Depende de los datos que AeroDataBox recibe para SDQ; los retrasos se calculan solo sobre esos vuelos.</p>',
     '</div>')
 }
 

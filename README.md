@@ -89,7 +89,7 @@ Un **día** es la fecha local de RD de la hora programada del vuelo en SDQ.
 - **Retrasos de más de 12 horas (720 min):** suelen ser vuelos reprogramados. Se excluyen del
   **promedio y del máximo** de retraso, y se cuentan aparte en `flights_delayed_720`. **Siguen
   contando como retrasados** en la puntualidad.
-- **Cobertura:** vuelos con dato de retraso / (total - cancelados - desviados).
+- **Con hora real:** vuelos con dato de retraso / (total - cancelados - desviados). Depende de los datos que AeroDataBox recibe para SDQ; los retrasos se calculan solo sobre esos vuelos.
 
 ## Retención de datos de AeroDataBox
 
