@@ -90,6 +90,7 @@ Un **día** es la fecha local de RD de la hora programada del vuelo en SDQ.
   **promedio y del máximo** de retraso, y se cuentan aparte en `flights_delayed_720`. **Siguen
   contando como retrasados** en la puntualidad.
 - **Con hora real:** vuelos con dato de retraso / (total - cancelados - desviados). Depende de los datos que AeroDataBox recibe para SDQ; los retrasos se calculan solo sobre esos vuelos.
+- **Vuelos incluidos:** se excluyen carga, vuelos privados y códigos compartidos (codeshare), según la clasificación de AeroDataBox, para no contar el mismo avión dos veces.
 
 ## Retención de datos de AeroDataBox
 

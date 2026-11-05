@@ -538,6 +538,7 @@ email_html <- function(d, section) {
     '<div style="padding:8px 4px;background-color:', COLOR_PAGE, ';">', section, '</div>',
     '<div style="padding:14px 20px;background-color:#FFFFFF;font-size:12px;color:', COLOR_MUTED, ';">',
     '<div>Datos: AeroDataBox</div>',
+    '<div>Excluye vuelos de carga, privados y c&oacute;digos compartidos, seg&uacute;n la clasificaci&oacute;n de AeroDataBox.</div>',
     '<div style="color:', COLOR_NAVY, ';">WilData Systems &mdash; Transformamos datos en decisiones inteligentes</div>',
     '</div>',
     '</div>')
